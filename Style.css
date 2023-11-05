@@ -1,0 +1,681 @@
+:root {
+    --hwight : 1300px;
+    --vh :100% - 20em;
+    
+  }
+html{
+    scroll-behavior: smooth;
+}
+
+*{
+    margin:0px;
+    padding: 0px;
+   /*  box-sizing: border-box; */
+}
+header a{
+    text-decoration: none;
+    color: black;
+}
+header{
+    background-image: url(images/HeaderBG.jpg);
+    height: 900px;
+    width:100%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.logo{
+    
+    font-size: 40px;
+    line-height: 90px;
+    font-weight: bolder;
+    margin-left: 3vw;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+nav{
+    background-color: #4820005b;
+    height:100px;
+    font-size: 30px;
+    /*     position:absolute; */
+    /* top:70px; */
+    width:100%;
+    
+}
+nav #chk, .typ{
+    display: none;
+}
+
+.navItems{
+    color: ivory;
+    font-weight: bold;
+    float: right;
+    display: flex;
+    column-gap: 10px;
+    height: 100%;
+
+}
+.myNavitems{
+    display: flex;
+    align-items: center;
+    cursor:pointer;
+    padding: 0px 10px;
+    height: 94%;
+    user-select: none;
+    transition: 0.1s;
+}
+
+.myNavitems:hover{
+/*     background-color: aquamarine;
+    border-radius: 5px; */
+    border-bottom: solid 3px black;
+    border-top: solid 3px transparent;
+}
+
+.headerText{
+    background-color: rgba(255, 255, 255, 0.269);
+    margin-top:140px;
+    color:rgb(0, 0, 0);
+    text-align: center;
+
+}
+.headerText #bsmlh{
+    font-size: 30px;
+    font-weight:900;
+}
+.headerText #aya{
+    font-size: 60px;
+    font-weight: bolder;
+}
+#readmore{
+    margin-top:160px;
+    font-size: 35px;
+    height:70px;
+    width:230px;
+    border:none ;
+    border-radius: 4px;
+    font-weight: bold;
+    background-color: #ff9138;
+    position: relative;
+    right:-42.5%;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    
+}
+#rdmore{
+    z-index: 1;
+    cursor: pointer;
+}
+#readmore::before{
+    content: "";
+    width: 0px;
+    height:100%;
+    position: absolute;
+    top:0px;
+    left:0px;
+    cursor: pointer;
+    background-color:#7b3700a5 ;
+    border-radius: 4px;
+    z-index: -1;
+    transition: width 0.5s;
+}
+#readmore:hover:before{
+    width: 100%;
+}
+#readmore:active:before{
+    background-color:#cb5b00a5
+}
+#readmore #fill{
+    height: 100%;
+    width:100%;
+    background-color: blanchedalmond;
+}
+@media screen and (max-width: 770px) {
+    .logo{
+    
+        font-size:10vw;
+        line-height: 90px;
+        font-weight: bolder;
+        margin-left: 3vw;
+        font-family:Verdana, Geneva, Tahoma, sans-serif;
+    }
+    nav div{
+        transition: all 0.5s;
+    }
+    nav{
+        background-color: #4820005b;
+        font-size: 30px;
+        width:100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        
+        
+    }
+    nav .typ{
+        display: inline-block;
+        transform: scale(2) translate(-10px,46px);
+        z-index: 4;
+    }
+    
+    .navItems{
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        width: 100vw;
+        align-items: center;
+        z-index: 2;
+        background-color: #e98b3e;
+        right:100%;
+        transform:translateY(-58px);
+        transition:all 0.3s ease-out;
+        
+    }
+    .myNavitems{
+        height: 50px;
+        margin-bottom:20px ;
+        transform: translateY(40px);
+    }
+    #chk:checked ~.navItems{
+        right:0;
+    }
+    
+    .myNavitems:hover{
+
+            border-bottom: none;
+            border-top: none;
+            background-color: #954f15;
+        }
+        @keyframes slideLeft{
+            from{transform: translateX(-100%)}
+        }
+    
+}
+main{
+    margin-top:200px;
+}
+.IsamlicEvents{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 13vw;
+}
+.img{
+    border: solid 15px #f3842add;
+    
+    border-radius: 10px;
+}
+.img img{
+    width: 500px;
+    transform: translate(20px, -15px) scale(1.02);
+    border-radius: 10px;
+}
+
+.eventTxt{
+    transform: translateX(30px);
+}
+.IsamlicEvents P{
+    margin-top: 30px;
+    color: #555555;
+    width: 350px;
+    display: inline-block;
+}
+@media screen and (max-width: 600px) {
+    .IsamlicEvents{
+        display: flex;
+        flex-wrap: wrap;
+        margin-left:0vw;
+    }
+    .img img{
+        width: 270px;
+
+    }
+    #readmore{
+        margin-top:160px;
+        font-size: 16px;
+        height:40px;
+        width:120px;
+        right:-37%;
+        
+    }
+    .headerText #bsmlh{
+        font-size: 20px;
+        font-weight:900;
+    }
+    .headerText #aya{
+        font-size: 30px;
+        font-weight: bolder;
+    }
+    .IsamlicEvents P{
+        width: 300px;
+    }
+    header{
+
+        height: 700px;
+    }
+    .eventTxt{
+        transform: translateX(0px);
+    }
+}
+.services{
+    width: 100%;
+    height: 30vw;
+    padding-bottom: 70px;
+    margin-top: 150px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color:#7b3d0b21;
+}
+
+.serviceIcons{
+ width:100%;
+
+ display: flex;
+ justify-content:space-around;
+
+}
+.serviceIcons img{
+    
+    width:12vw;
+    height: 12vw;
+}
+
+.icons{
+    text-align: center;
+    font-size:2.5vw;
+    transition: 0.4s;
+}
+.icons:hover{
+    filter: brightness(50%);
+}
+.IslamPillars {
+    background-image: url(images/mosqueBg.jpg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    color: white;
+    width: 100%;
+    height: auto;
+    padding-bottom: 40px;
+
+/*     margin-top: 90px; */
+}
+.IslamPillars    h1{
+    margin-bottom: 50px;
+    font-size:50px;
+    text-align: center;
+
+}
+.pillars{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.pil{
+    border-radius: 100%;
+    padding: 30px;
+    border: solid 10px #f3842add;
+}
+.pil img{
+    width: 150px;
+}
+.pilftxt{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.pilftxt label{
+    font-size:45px;
+    font-weight: bold;
+}
+@media screen and (max-width: 600px){
+    .pil img{
+        width: 80px;
+    }
+    .pilftxt label{
+        font-size:30px;
+        font-weight: bold;
+    }
+    .services{
+        width: 100%;
+        height: 30vw;
+    }
+    
+    .serviceIcons img{
+        
+        width:20vw;
+        height: 18vw;
+    }
+}
+.WhatEvents h1{
+    text-align: center;
+    margin: 20px 0px;
+    font-size: 50px;
+    
+}
+.WhatEvents h3{
+    text-align: center;
+    margin-top: 40px;
+    font-size: 20px;
+}
+.WhatEvents{
+    margin-top:40px;
+    display: flex;
+    flex-direction: column;
+    
+}
+.cont{
+    overflow:unset;
+}
+.myeveCont{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    row-gap: 30px;
+} 
+
+
+.IslamicSec1 {
+    display: flex;
+    flex-direction: column;
+    justify-content:start ;
+    flex-shrink: 0;
+    row-gap: 30px;
+}
+.ismalmicI{
+    display: flex;
+    justify-content:space-around;
+    overflow: hidden;
+}
+.ismalmicI .events{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.IslamicSec1 .ismalmicI{
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    border-radius: 6px;
+    box-shadow: -2px 2px 13px black;
+    width:600px;
+    height: 180px;
+}
+.IslamicSec1 .ismalmicI #ntwo{
+    display: none;
+}
+.IslamicSec1 img{
+    width:270px;
+    height: 180px;
+    transition: 0.5s;
+}
+
+.IslamicSec1 img:hover{
+    transform: scale(1.3);
+    filter: brightness(50%);
+    
+}
+
+.ismalmicI:hover img{
+    transform: scale(1.3);
+    filter: brightness(50%);
+}
+.IslamicSec2{
+    height: 100;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    
+}
+.IslamicSec2 .ismalmicI{
+    width: 500px;
+    height:30%;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow:2px 2px 10px rgba(0, 0, 0, 0.336) ;
+    transition: 0.5s;
+}
+
+.IslamicSec2 .ismalmicI:hover{
+    background-image: url(images/PalastineFree.jpg);
+    filter: brightness(50%);
+}
+@media screen and (max-width: 600px){
+    .IslamicSec1 .ismalmicI{
+        width: 300px;
+        height: 80px;
+    }
+    .IslamicSec1 .ismalmicI #nOne{
+        display: none;
+    }
+    .IslamicSec1 .ismalmicI #ntwo{
+        display: inline-block;
+    }
+    .IslamicSec1 img{
+        width:170px;
+        height: 100px;
+        transition: 0.5s;
+    }
+    .IslamicSec2 .ismalmicI{
+
+        width: 250px;
+    }
+    .WhatEvents h1{
+
+        font-size: 30px;
+        
+    }
+    .WhatEvents h3{
+        font-size: 15px;
+    }
+}
+/* .IslamicSec1 #item1{
+
+    display: flex;
+}
+.IslamicSec1 #item2{
+
+    display: flex;
+} */
+
+.Teachers{
+    margin-top: 80px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    row-gap: 20px;
+}
+.Teachers h1{
+    font-size:55px;
+}
+.Teachers h3{
+    font-size:30px;
+}
+.Teachers img{
+    width:300px;
+
+}
+.TechCont{
+    display: flex;
+    justify-content: space-around;
+    row-gap: 30px;
+    flex-wrap: wrap;
+}
+
+.TechCont .img2 img{    
+/* border: solid 6px rgb(185, 92, 25); */
+border-radius: 7px;
+display: flex;
+flex-direction: column;
+transition: 0.3s;
+    
+}
+
+.TechCont .box a{
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+}
+
+.TechCont .box{
+    border: 3px solid black;
+    text-align: center;
+    font-weight: 1000;
+    position: relative;
+    top:-10%;
+    right:-15%;
+    height: 60px;
+    width: 200px;
+    border-radius: 10px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.TechCont .img2 img:hover, .TechCont .img2 a:hover img{    
+    transform: scale(1.1);
+    filter: brightness(70%);
+        
+    }
+@media screen and (max-width: 600px){
+    .Teachers h1{
+        font-size:30px;
+    }
+    .Teachers h3{
+        font-size:20px;
+    }
+    .Teachers img{
+        width:200px;
+    
+    }
+    
+    .TechCont .img2 img{    
+    /* border: solid 6px rgb(185, 92, 25); */
+    border-radius: 7px;
+    display: flex;
+    flex-direction: column;
+        
+    }
+    .TechCont .box{
+        border: 3px solid black;
+        text-align: center;
+        font-weight: 1000;
+        position: relative;
+        top:-10%;
+        right:-15%;
+        height: 40px;
+        width: 140px;
+
+    }
+}
+.ContactUs{
+    margin: 100px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.ContactUs form{
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width:65vw;
+    row-gap: 40px;
+}
+.ContactUs form input{
+    width:400px;
+    height: 40px;
+    row-gap: 20px;
+}
+.ContactUs form label{
+    font-size: 20px;
+}
+@media screen and (max-width: 600px){
+    .ContactUs form input{
+        width:300px;
+        height: 40px;
+        row-gap: 20px;
+    }
+}
+.footer{
+    background:#954f15;
+    padding:30px 0px;
+    font-family: 'Play', sans-serif;
+    text-align:center;
+    }
+    
+    .footer .row{
+    width:100%;
+    margin:1% 0%;
+    padding:0.6% 0%;
+    color:gray;
+    font-size:0.8em;
+    }
+    
+    .footer .row a{
+    text-decoration:none;
+    color:rgb(254, 254, 254);
+    transition:0.5s;
+    }
+    
+    .footer .row a:hover{
+    color:#fc8c31;
+    }
+    
+    .footer .row ul{
+    width:100%;
+    }
+    
+    .footer .row ul li{
+    display:inline-block;
+    margin:0px 30px;
+    }
+    
+    .footer .row a i{
+    font-size:2em;
+    margin:0% 1%;
+    }
+    
+    @media (max-width:720px){
+    .footer{
+    text-align:left;
+    padding:5%;
+    }
+    .footer .row ul li{
+    display:block;
+    margin:10px 0px;
+    text-align:left;
+    }
+    .footer .row a i{
+    margin:0% 3%;
+    }
+    }
+
+
+.colorChanger{
+    position: fixed;
+    right: 0;
+    width: 35vw;
+    height: calc(65% - 20vw);
+    background-color:#e98b3eb3;
+    box-shadow: 2px 2px 9   px black;
+    z-index: 2;
+    display: flex;
+    column-gap: 20px;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.colorChanger .color{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: #555555;
+}
