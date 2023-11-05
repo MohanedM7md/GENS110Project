@@ -1,4 +1,3 @@
-
 const setColor = Array.from(document.querySelector(".colorChanger").children);
 setColor.forEach(element => {
     element.style.backgroundColor = element.id;
