@@ -1,12 +1,13 @@
-:root {
-    --hwight : 1300px;
-    --vh :100% - 20em;
-    
-  }
+
 html{
     scroll-behavior: smooth;
 }
-
+.logo i {
+    color: var(--darkOragneColor) !important;
+}
+.logo label{
+    color: var(--oragneColor) !important;
+}
 *{
     margin:0px;
     padding: 0px;
@@ -17,7 +18,7 @@ header a{
     color: black;
 }
 header{
-    background-image: url(images/HeaderBG.jpg);
+    background-image: url(images/HeaderBG.png);
     height: 900px;
     width:100%;
     background-position: center;
@@ -33,7 +34,7 @@ header{
     font-family:Verdana, Geneva, Tahoma, sans-serif;
 }
 nav{
-    background-color: #4820005b;
+    background-color: var(--shadedOrange);
     height:100px;
     font-size: 30px;
     /*     position:absolute; */
@@ -94,7 +95,7 @@ nav #chk, .typ{
     border:none ;
     border-radius: 4px;
     font-weight: bold;
-    background-color: #38ff4f;
+    background-color: var(--oragneColor);
     position: relative;
     right:-42.5%;
     cursor: pointer;
@@ -115,7 +116,7 @@ nav #chk, .typ{
     top:0px;
     left:0px;
     cursor: pointer;
-    background-color:#7b3700a5 ;
+    background-color:var(--darkOragneColor) ;
     border-radius: 4px;
     z-index: -1;
     transition: width 0.5s;
@@ -124,7 +125,7 @@ nav #chk, .typ{
     width: 100%;
 }
 #readmore:active:before{
-    background-color:#cb5b00a5
+    filter: brightness(50%);
 }
 #readmore #fill{
     height: 100%;
@@ -144,7 +145,7 @@ nav #chk, .typ{
         transition: all 0.5s;
     }
     nav{
-        background-color: #4820005b;
+        background-color: var(--darkOragneColor);
         font-size: 30px;
         width:100%;
         display: flex;
@@ -160,17 +161,18 @@ nav #chk, .typ{
     }
     
     .navItems{
-        position: absolute;
+        position: fixed;
         display: flex;
         flex-direction: column;
         height: 100vh;
         width: 100vw;
         align-items: center;
         z-index: 2;
-        background-color: #e98b3e;
+        background-color: var(--oragneColor);
         right:100%;
-        transform:translateY(-58px);
+        transform:translateY(-60px);
         transition:all 0.3s ease-out;
+
         
     }
     .myNavitems{
@@ -178,7 +180,14 @@ nav #chk, .typ{
         margin-bottom:20px ;
         transform: translateY(40px);
     }
-    #chk:checked ~.navItems{
+    #chk:checked ~label{
+        transform: none;
+    position: fixed;
+    scale: 2.1;
+    right: 19px;
+    top: 104px;
+    }
+    #chk:checked ~div {
         right:0;
     }
     
@@ -186,7 +195,7 @@ nav #chk, .typ{
 
             border-bottom: none;
             border-top: none;
-            background-color: #954f15;
+            background-color: var(--darkOragneColor);
         }
         @keyframes slideLeft{
             from{transform: translateX(-100%)}
@@ -199,10 +208,10 @@ main{
 .IsamlicEvents{
     display: flex;
     flex-wrap: wrap;
-    margin-left: 13vw;
+    margin-left: 11vw;
 }
 .img{
-    border: solid 15px #f3842add;
+    border: solid 15px var(--oragneColor);
     
     border-radius: 10px;
 }
@@ -221,11 +230,14 @@ main{
     width: 350px;
     display: inline-block;
 }
+.date .day,.month{
+    color:var(--oragneColor) !important;
+}
 @media screen and (max-width: 600px) {
     .IsamlicEvents{
         display: flex;
         flex-wrap: wrap;
-        margin-left:0vw;
+        margin-left:1vw;
     }
     .img img{
         width: 270px;
@@ -267,7 +279,7 @@ main{
     align-items: center;
     flex-direction: column;
     justify-content: space-around;
-    background-color:#7b3d0b21;
+    background-color:var(--shadedOrange);
 }
 
 .serviceIcons{
@@ -278,7 +290,7 @@ main{
 
 }
 .serviceIcons img{
-    
+    filter: var(--blueImge);
     width:12vw;
     height: 12vw;
 }
@@ -291,69 +303,6 @@ main{
 .icons:hover{
     filter: brightness(50%);
 }
-.IslamPillars {
-    background-image: url(images/mosqueBg.jpg);
-    background-position: center;
-    background-size: cover;
-    background-attachment: fixed;
-    color: white;
-    width: 100%;
-    height: auto;
-    padding-bottom: 40px;
-
-/*     margin-top: 90px; */
-}
-.IslamPillars    h1{
-    margin-bottom: 50px;
-    font-size:50px;
-    text-align: center;
-
-}
-.pillars{
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-}
-.pil{
-    border-radius: 100%;
-    padding: 30px;
-    border: solid 10px #f3842add;
-}
-.pil img{
-    width: 150px;
-}
-.pilftxt{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    
-}
-
-.pilftxt label{
-    font-size:45px;
-    font-weight: bold;
-}
-@media screen and (max-width: 600px){
-    .pil img{
-        width: 80px;
-    }
-    .pilftxt label{
-        font-size:30px;
-        font-weight: bold;
-    }
-    .services{
-        width: 100%;
-        height: 30vw;
-    }
-    
-    .serviceIcons img{
-        
-        width:20vw;
-        height: 18vw;
-    }
-}
 .WhatEvents h1{
     text-align: center;
     margin: 20px 0px;
@@ -362,11 +311,11 @@ main{
 }
 .WhatEvents h3{
     text-align: center;
-    margin-top: 40px;
+    margin-top:2px;
     font-size: 20px;
 }
 .WhatEvents{
-    margin-top:40px;
+
     display: flex;
     flex-direction: column;
     
@@ -444,7 +393,7 @@ main{
 }
 
 .IslamicSec2 .ismalmicI:hover{
-    background-image: url(images/PalastineFree.jpg);
+    background-image: url(images/RCOY.webp);
     filter: brightness(50%);
 }
 @media screen and (max-width: 600px){
@@ -499,50 +448,77 @@ main{
     font-size:30px;
 }
 .Teachers img{
-    width:300px;
+    width:26vw;
+    height: 430px;
+    border-radius: 7px;
+    object-fit: cover;
+    scroll-snap-align: start;
+    pointer-events: none;
+    transition: all 0.1s;
+    border: solid black 1px;
+    box-shadow:3px 3px 10px black;
 
+}
+.Teachers .img2{
+    transition: all 0.1s;
+
+}
+@media screen and (max-width: 800px){
+    .Teachers img{
+        width:26vw;
+        border-radius: 7px;
+    }
 }
 .TechCont{
+    box-sizing: border-box;
     display: flex;
-    justify-content: space-around;
-    row-gap: 30px;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
+    white-space:nowrap;
+    column-gap: 20px;
+    margin-left: 8.5vw;
+    margin-right: 8.5vw;
+    overflow-y: visible;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-snap-type: X mandatory;
+    height: 40vw;
+    align-items: center;
+    transition: all 0.5s;
+}
+.TechCont:active{
+    cursor: grabbing;
+    scroll-snap-type: none;
+    scroll-behavior:unset;  
 }
 
-.TechCont .img2 img{    
-/* border: solid 6px rgb(185, 92, 25); */
-border-radius: 7px;
-display: flex;
-flex-direction: column;
-transition: 0.3s;
-    
+.yarbN5ls{
+    font-size: 3em;
+    scroll-behavior: smooth;
+
 }
 
-.TechCont .box a{
-    text-decoration: none;
-    color: black;
-    font-size: 20px;
-}
-
-.TechCont .box{
-    border: 3px solid black;
-    text-align: center;
-    font-weight: 1000;
+/* .yarbN5ls .fa-solid.fa-arrow-left{
     position: relative;
-    top:-10%;
-    right:-15%;
-    height: 60px;
-    width: 200px;
-    border-radius: 10px;
-    background-color: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    top:100%;
+    right:44vw;
+    cursor: pointer;
 }
+.yarbN5ls .fa-solid.fa-arrow-right{
+    position: relative;
+    top:-340px;
+    right:-44vw;
+    cursor: pointer;
+} */
+
 .TechCont .img2 img:hover, .TechCont .img2 a:hover img{    
     transform: scale(1.1);
     filter: brightness(70%);
         
+    }
+    @media screen and (max-width: 900px){
+        .TechCont{
+            height: 70vw;
+        }
     }
 @media screen and (max-width: 600px){
     .Teachers h1{
@@ -552,31 +528,30 @@ transition: 0.3s;
         font-size:20px;
     }
     .Teachers img{
-        width:200px;
+        width:38vw;
+        height: 200px;
+        border-radius: 7px;
     
     }
-    
-    .TechCont .img2 img{    
-    /* border: solid 6px rgb(185, 92, 25); */
-    border-radius: 7px;
-    display: flex;
-    flex-direction: column;
-        
-    }
-    .TechCont .box{
-        border: 3px solid black;
-        text-align: center;
-        font-weight: 1000;
+    .yarbN5ls .fa-solid.fa-arrow-left{
         position: relative;
-        top:-10%;
-        right:-15%;
-        height: 40px;
-        width: 140px;
-
+        top:164px;
+        right:46vw;
+    }
+    .yarbN5ls .fa-solid.fa-arrow-right{
+        position: relative;
+        top:-162px;
+        right:-46vw;
+    }
+    .yarbN5ls{
+        font-size: 1.5em;
+        scroll-behavior: smooth;
+    
     }
 }
 .ContactUs{
     margin: 100px 0px;
+    margin-top: 0px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -598,6 +573,7 @@ transition: 0.3s;
 .ContactUs form label{
     font-size: 20px;
 }
+
 @media screen and (max-width: 600px){
     .ContactUs form input{
         width:300px;
@@ -606,7 +582,7 @@ transition: 0.3s;
     }
 }
 .footer{
-    background:#954f15;
+    background:var(--darkOragneColor);
     padding:30px 0px;
     font-family: 'Play', sans-serif;
     text-align:center;
@@ -627,7 +603,7 @@ transition: 0.3s;
     }
     
     .footer .row a:hover{
-    color:#fc8c31;
+    color:var(--oragneColor);
     }
     
     .footer .row ul{
@@ -662,20 +638,58 @@ transition: 0.3s;
 
 .colorChanger{
     position: fixed;
-    right: 0;
-    width: 35vw;
-    height: calc(65% - 20vw);
-    background-color:#e98b3eb3;
-    box-shadow: 2px 2px 9   px black;
-    z-index: 2;
+    right: -320px;
+    width: 380px;
+    height: 50px;
+    background-color:rgba(33, 33, 33, 0.537);
+    box-shadow: 2px 2px 9px black;
+    z-index: 5;
     display: flex;
     column-gap: 20px;
     justify-content: space-around;
     flex-wrap: wrap;
+    border-radius: 6px;
+    transition: all 0.5s;
 }
 .colorChanger .color{
-    width: 70px;
-    height: 70px;
+    width: 42px;
+    height: 42px;
     border-radius: 50%;
     background-color: #555555;
+    cursor: pointer;
+}
+.colorChanger .color:active{
+    cursor: grabbing;
+}
+.fa-solid.fa-gear{
+        position: relative;
+        scale: 2.4;
+        right: 8px;
+        cursor: pointer;
+        animation-name:none ;
+        animation-duration: 3s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+}
+@keyframes rotate{
+    100%{transform: rotateZ(360deg);}
+}
+@media screen and (max-width: 340px){
+    .colorChanger{
+        position: fixed;
+        right: -280px;
+        width: 320px;
+        height: 50px;
+    }
+    .colorChanger .color{
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+        background-color: #555555;
+    }
+    .fa-solid.fa-gear{
+        position: relative;
+        scale: 2;
+        right: 0px;
+}
 }

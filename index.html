@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Muslmeen Web</title>
+        <title>EnviroNet</title>
         <link rel="icon" href="mosqueIcon.png">
         <link href = "Style.css" rel = "stylesheet">
         <script src="https://kit.fontawesome.com/1f7a4da402.js" crossorigin="anonymous"></script>
@@ -12,16 +12,38 @@
         <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Play&display=swap" rel="stylesheet"> 
         <link href='https://unpkg.com/css.gg@2.0.0/icons/css/menu.css' rel='stylesheet'>
         <script href = "hed.js"></script>
+        <style>
+            :root {
+            --oragneColor:#33cf22;
+            --darkOragneColor:#297b00d4;
+            --shadedOrange:#1e7b0b21;
+            --blueImge: sepia(50%) hue-rotate(50deg) saturate(300%);
+            }
+        </style>
     </head>
 
     <body>
         <header>
+  
+
+            <div class="colorChanger" style="  display: flex;
+            align-items: center;
+            justify-content: center;">
+                <div id = "smola" >
+                    <i class="fa-solid fa-gear" id = "mysamola"></i>
+                </div>
+                <div class="color" id = "red"></div>
+                <div class="color" id = "blue"></div>
+                <div class="color" id = "green"></div>
+                <div class="color" id = "yellow"></div>
+                <div class="color" id = "Orange"></div>
+            </div>    
             <div style="height: 60px;"></div>
             <nav>
-                <div class = "logo" style="display: inline-block;"><i style="color:rgb(116, 83, 0);" class="fa-solid fa-mosque"></i><lable style="color:rgb(190, 57, 13);">Muslmeen</lable></div>
+                <div class = "logo" style="display: inline-block;"><i class="fa-solid fa-earth-americas"></i><label>EnviroNet</label></div>
 
-                    <label for = "chk" class = "typ"><i class="gg-menu"></i></label>
                     <input type="checkbox" id = "chk">
+                    <label for = "chk" class = "typ"><i class="gg-menu"></i></label>
                 <div class = "navItems">
                     <div class ="myNavitems"><a href = "#">Home</a></div>
                     <div class ="myNavitems"><a href = "#services">Service</a></div>
@@ -31,8 +53,8 @@
                 </div>
             </nav>
             <section class = "headerText">
-                <div id = "bsmlh">بِسْمِ اللَّـهِ الرَّحْمَـٰنِ الرَّحِيمِ</div>
-                <div id = "aya">﴾  يَا أَيُّهَا الَّذِينَ آمَنُوا اسْتَعِينُوا بِالصَّبْرِ وَالصَّلَاةِ ۚ إِنَّ اللَّهَ مَعَ الصَّابِرِينَ  ﴿</div>
+                
+                <div id = "aya" style = "font-family: Monospace;">"Guardians of Green: Advocating for Our Environment"</div>
             </section>
             <button id = "readmore"><label id = "rdmore">Read More</label></button>
         </header>
@@ -40,10 +62,10 @@
             <section class ="IsamlicEvents" id = "about">
                 <div class="img"><img src = "images/Abt.jpg"></div>
                 <div class="eventTxt">
-                    <h3 style="padding-top:20px ; color: chocolate;">Our history</h3>
-                    <h1 style="margin-top: 5px; font-size: 200%;">About Muslmeen Web</h1>
+                    <h3 style="padding-top:20px ; color: rgb(0, 138, 21);">about us</h3>
+                    <h1 style="margin-top: 5px; font-size: 200%;">Our Vision</h1>
                     <hr width="300px" style="border-radius: 2px;margin-top:5px;">
-                    <p >Our website aims to promote awareness of Islam by offering clear and engaging content, covering a range of topics from core beliefs to cultural diversity within the Muslim world. We provide regular news updates from Muslim-majority countries and foster an inclusive, respectful community. Our user-friendly design, transparency, and SEO optimization ensure easy access and reach, contributing to a better understanding of Islam and its global influence.</p>
+                    <p>we seek to create a thriving website  that connects local individuals passionate about serving the environment. Through our website, we provide a dynamic marketplace for event organizers to showcase environmentally-focused initiatives and organizations to reach out to motivated participants. By offering targeted advertisements and Google forms, we strive to facilitate easy access to local events while fostering active community engagement. We envision a future where every individual is empowered to actively contribute towards a sustainable and thriving environment, creating a positive impact on the planet we call home.</p>
                 </div>
             </section>
 
@@ -53,73 +75,45 @@
                 <div class="serviceIcons">
                     <div id = "icon1" class="icons">
                         <img src = "images/Icons/open-book.png"><br><br>
-                        Teaching islams
+                        Enviro. Science Tutoring
                     </div>
                     <div id="icon2" class="icons">
                         <img src = "images/Icons/alms.png"><br><br>
-                        Helps Poor
+                        Waste Reduction
                     </div>
                     <div id="icon3" class="icons">
                         <img src = "images/Icons/mosque.png"><br><br>
-                        Quran Learning
+                        Particibating in Enviro. activities
                     </div>
                 </div>
             </section>
 
-            <section class = "IslamPillars">
-                <h1>Pillars Of Islam</h1>
-                <div class = "pillars">
-                    <div class = "pilftxt">
-                        <div id = "pil1" class = "pil">
-                            <img src = "images/pill icons/pointing-hand.png">
-                        </div><br><br>
-                        <label>Shihada</label>
-                    </div>
-
-                    <div class = "pilftxt">
-                        <div id = "pil2" class = "pil"><img src="images/pill icons/islamicpray.png"></div><br>
-                        <label>Salah</label>
-                    </div>  
-
-                    <div class = "pilftxt">
-                        <div id = "pil3" class = "pil"><img src="images/pill icons/islamic-ramadan-.png"></div><br>
-                        <label>Sawm</label>
-                    </div>
-
-                    <div class = "pilftxt">
-                        <div id = "pil4" class = "pil"><img src="images/pill icons/pay.png"></div><br><br>
-                        <label>Zakat</label>
-                    </div>
-
-                    <div class = "pilftxt">
-                        <div id = "pil5" class = "pil"><img src = "images/pill icons/kaaba.png"></div><br>
-                        <label>Hajj</label>
-                    </div>
-                </div>
-            </section>
+            
 
             <section class = "WhatEvents" id = "WhatEvents">
-                <h3 style="color: coral;">Latest New</h3>
-                <h1>Islamic News</h1>
+                <h3 style="color: rgb(15, 175, 0);">Latest New</h3>
+                <h1>Events</h1>
                 <div class = "myeveCont">
                     <div class = "IslamicSec1">
 
                         <div class="ismalmicI" id = "item1">
                             <div class = "cont conn-1">
-                                <img src="images/FreePalastine.jpeg">
+                                <img src="images/RCOY.webp">
                             </div>
                             <div class = "cont conn-2" style="padding-left: 20px;">
-                                <p id = "nOne">Israel on Monday threatened to track down and punish Hamas fighters while announcing a “total blockade” of the Gaza Strip following a surprise weekend attack by the armed Palestinian group.</p>
-                                <p id = "ntwo">Free Plastine!<br>Israel Attacks Gaza</p>
+                                <h3 >AYF Meets RCOY MENA 2023</h3>
+                                <p id = "nOne">RCOY, or Regional Conference of Youth by YOUNGO, gathers youth ideas for UNFCCC COP. Occurring after LCOY and before GCOY, RCOYs localize climate discussions, uniting youth voices globally.</p>
+                                <p id = "ntwo">Regional Conference of Youth<br>channels global youth input for UNFCCC COP</p>
                             </div>
                         </div>
 
                         <div class="ismalmicI" id = "item2">
                             <div class = "cont conn-1">
-                                <img src="images/FreePalastine.jpeg" >
+                                <img src="images/LCOY.png" >
                             </div>
                             <div class = "cont conn-2" style="padding-left: 20px;">
-                                <p id = "nOne">Israel on Monday threatened to track down and punish Hamas fighters while announcing a “total blockade” of the Gaza Strip following a surprise weekend attack by the armed Palestinian group.</p>
+                                <h3 >AN EVENT UNDER THE UMBRELLA OF YOUNGO</h3>
+                                <p id = "nOne">This Year’s Journey Will Be Held In Five (5) Egyptian Governorates, With Covering Of The 27 Governorates, Ensuring That All Governorates Have Representatives. These Governorates Will Host Other Governorates According To The Distribution Plan</p>
                                 <p id = "ntwo">Free Plastine!<br>Israel Attacks Gaza</p>
                             </div>
                         </div>
@@ -128,32 +122,32 @@
                     <div class="IslamicSec2">
                         <div class="ismalmicI" id = "item1">
                             <div class="date">
-                                <div class="day" style="font-size: 55px; font-weight: bold;color: rgb(131, 65, 19)">
-                                    7
+                                <div class="day" style="font-size: 55px; font-weight: bold;color: rgb(19, 131, 25)">
+                                    29
                                 </div>
-                                <div class="month" style="font-size: 20px; color: chocolate; ">
+                                <div class="month" style="font-size: 20px; color: rgb(10, 87, 2); ">
                                     Oct
                                 </div>
                             </div>
                             <div class="events">
-                                <h2>AL AQSA FLOAD</h2>
-                                <h4 style="color: dimgray;">-Gaza</h4>
-                                <a style="color: dimgray;" href="https://www.aljazeera.com/news/2023/10/9/what-is-happening-in-israel-and-gaza-a-look-at-the-war-with-hamas">Event Details</a>
+                                <h2>LCOY Event</h2>
+                                <h4 style="color: dimgray;">-Cairo/AUC Fifth settlement</h4>    
+                                <a style="color: dimgray;" href="https://lcoyegypt.com/">Event Details</a>
                             </div>
                         </div>
 
                         <div class="ismalmicI" id = "item2">
                             <div class="date">
-                                <div class="day" style="font-size: 55px; font-weight: bold;color: rgb(131, 65, 19)">
-                                    7
+                                <div class="day" style="font-size: 55px; font-weight: bold;color: rgb(19, 131, 36)">
+                                    17
                                 </div>
-                                <div class="month" style="font-size: 20px;color: chocolate;  ">
+                                <div class="month" style="font-size: 20px;color: rgb(30, 210, 45);  ">
                                     Oct
                                 </div>
                             </div>
                             <div class="events">
-                                <h2>AL AQSA FLOAD</h2>
-                                <h4 style="color: dimgray;">-Gaza</h4>
+                                <h2>RCOY Event</h2>
+                                <h4 style="color: dimgray;">-Cairo/El-tahrir GreekCampus</h4>
                                 <a style="color: dimgray;" href="https://www.aljazeera.com/news/2023/10/9/what-is-happening-in-israel-and-gaza-a-look-at-the-war-with-hamas">Event Details</a>
                             </div>
 
@@ -161,10 +155,10 @@
 
                         <div class="ismalmicI" id = "item3">
                             <div class="date">
-                                <div class="day" style="font-size: 55px; font-weight: bold;color: rgb(131, 65, 19);">
+                                <div class="day" style="font-size: 55px; font-weight: bold;color: rgb(19, 131, 36);">
                                     7
                                 </div>
-                                <div class="month" style="font-size: 20px;color: chocolate;  ">
+                                <div class="month" style="font-size: 20px;color: rgb(30, 210, 57);  ">
                                     Oct
                                 </div>
                             </div>
@@ -180,12 +174,30 @@
             </section>
 
             <section class="Teachers">
-                <h1>Muslims Experts</h1>
-                <h3 style="color: darkorange;">Islamic Teachers</h3>
-                <div class = "TechCont">
-                    <div class = "img2 img-1"><a href = "https://www.facebook.com/amirmounirofficial/"><img src = "images/4io5/AmirMounir.jpg"></a><div class = "box">Amir Mounir<br><a href = "">Enter</a></div></div>
-                    <div class = "img2 img-2"><a href = "https://www.youtube.com/channel/UCkL2vNPCvXU1niLe7KhKFXg"><img src = "images/4io5/mustfaAdwy.jpg"></a><div class = "box">Mustfa AL Adwy<br><a href = "">Enter</a></div></div>
-                    <div class = "img2 img-3"><a href = "https://www.youtube.com/channel/UC3YmP7nqf514I1zh1eVbzrA"><img src = "images/4io5/ZakerNike.jpg"></a><div class = "box">Zakir Naik<br><a href = "">Enter</a></div></div>
+                <h1>Environment Volunteering</h1>
+                <h3 style="color: var(--darkOragneColor);">Volunteering initiatives</h3>
+                <div class = "yarbN5ls">
+                     
+                    <div class = "TechCont">
+                        <a href="https://wavemakersunited.com/"><div class = "img2 img-1">
+ 
+                                <img src = "images/4io5/WaveMakers.jpg">
+
+                        </div></a>
+                        <a href="https://www.greenpeace.org/mena/en/"><div class = "img2 img-2">
+                                <img src = "images/4io5/greenpeace.png">
+                        </div></a>
+
+                        <a href="https://www.ecomena.org/"><div class = "img2 img-3">
+
+                                <img src = "images/4io5/ECOmena.png">
+                            
+                        </div></a>
+                        <a href="https://aoye.org/"><div class = "img2 img-4">
+                            
+                                <img src = "images/4io5/AOYE.jpg">
+                        </div></a>
+                     
                 </div>
 
             </section>
