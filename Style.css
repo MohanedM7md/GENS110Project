@@ -394,18 +394,24 @@ main{
 
 .IslamicSec2 .ismalmicI:hover{
     background-image: url(images/RCOY.webp);
-    filter: brightness(50%);
+
+    /* filter: brightness(50%); */
+}
+.IslamicSec2 .ismalmicI:hover .events h4{
+    color: #ffffff;
+    font-size: larger;
 }
 @media screen and (max-width: 600px){
     .IslamicSec1 .ismalmicI{
         width: 300px;
         height: 80px;
     }
-    .IslamicSec1 .ismalmicI #nOne{
+    .IslamicSec1 .ismalmicI #nOne,h3{
         display: none;
     }
     .IslamicSec1 .ismalmicI #ntwo{
         display: inline-block;
+        font-size: small;
     }
     .IslamicSec1 img{
         width:170px;
